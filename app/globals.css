@@ -1,26 +1,72 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+
+  --animate-menu-in: menu-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-menu-fade: menu-fade 0.3s ease-out both;
+  --animate-item-in: item-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+  @keyframes menu-in {
+    from {
+      opacity: 0;
+      transform: translateY(-10px) scaleY(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scaleY(1);
+    }
+  }
+
+  @keyframes menu-fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes item-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  section[id] {
+    scroll-margin-top: 7rem;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-menu-in,
+  .animate-menu-fade,
+  .animate-item-in {
+    animation: none;
+  }
+}
+
+@layer utilities {
+  /* vh declared first as a fallback; dvh overrides it where supported. */
+  .max-h-menu {
+    max-height: calc(100vh - 5rem);
+    max-height: calc(100dvh - 5rem);
+  }
 }
