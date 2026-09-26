@@ -60,7 +60,7 @@ export default function Navbar() {
           <a href={hrefFor("#home")} className="flex items-center">
             <Image
               src="/logo/logo.png"
-              alt="Oldroll Entertainments LLP"
+              alt="Oldroll"
               width={2005}
               height={593}
               priority

@@ -6,6 +6,10 @@
   --animate-menu-in: menu-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
   --animate-menu-fade: menu-fade 0.3s ease-out both;
   --animate-item-in: item-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-rise-in: rise-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-drift: drift 18s ease-in-out infinite alternate;
+  --animate-scroll-line: scroll-line 2.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 
   @keyframes menu-in {
     from {
@@ -37,6 +41,45 @@
       transform: translateY(0);
     }
   }
+
+  @keyframes rise-in {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes drift {
+    from {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    to {
+      transform: translate3d(0, -6%, 0) scale(1.08);
+    }
+  }
+
+  @keyframes scroll-line {
+    0% {
+      transform: translateY(-100%);
+    }
+    60%,
+    100% {
+      transform: translateY(250%);
+    }
+  }
 }
 
 @layer base {
@@ -58,8 +101,17 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .animate-menu-in,
   .animate-menu-fade,
-  .animate-item-in {
+  .animate-item-in,
+  .animate-rise-in,
+  .animate-marquee,
+  .animate-drift,
+  .animate-scroll-line {
     animation: none;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 
@@ -68,5 +120,43 @@ body {
   .max-h-menu {
     max-height: calc(100vh - 5rem);
     max-height: calc(100dvh - 5rem);
+  }
+
+  /* Scroll-triggered entrance. Visibility is flipped by the Reveal component. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hairline grid used behind the hero. */
+  .bg-grid-lines {
+    background-image:
+      linear-gradient(to right, rgba(23, 23, 23, 0.055) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(23, 23, 23, 0.055) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+
+  .mask-fade-b {
+    mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 100%);
+  }
+
+  .mask-fade-x {
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 12%,
+      black 88%,
+      transparent 100%
+    );
   }
 }

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Oldroll Entertainments LLP",
+  title: "Oldroll",
   description: "Engineering experiences, from code to reality.",
 };
 

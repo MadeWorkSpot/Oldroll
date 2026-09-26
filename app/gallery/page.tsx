@@ -4,9 +4,9 @@ import GalleryGrid from "../components/GalleryGrid";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Gallery — Oldroll Entertainments LLP",
+  title: "Gallery — Oldroll",
   description:
-    "Selected work from Oldroll Entertainments LLP: VR experiences, photo booths, and interactive products.",
+    "Selected work from Oldroll: VR experiences, photo booths, and interactive products.",
 };
 
 export default function GalleryPage() {

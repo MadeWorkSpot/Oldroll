@@ -16,12 +16,12 @@ const follow = [
 
 export default function Footer() {
   return (
-    <footer className="px-6 md:px-12 lg:px-24 border-t border-neutral-100 bg-white">
+    <footer className="px-6 md:px-12 lg:px-24 border-t border-neutral-100 bg-neutral-50/60">
       <div className="w-full grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-12">
         <div className="lg:col-span-6 space-y-5">
           <Image
             src="/logo/logo.png"
-            alt="Oldroll Entertainments LLP"
+            alt="Oldroll"
             width={2005}
             height={593}
             className="h-10 w-auto"
@@ -59,7 +59,7 @@ export default function Footer() {
       </div>
 
       <div className="w-full flex flex-col gap-2 border-t border-neutral-100 py-6 text-base text-neutral-400 sm:flex-row sm:items-center sm:justify-between">
-        <p>&copy; {new Date().getFullYear()} Oldroll Entertainments LLP. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Oldroll. All rights reserved.</p>
         <p>Engineering experiences, from code to reality.</p>
       </div>
     </footer>

@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
+import MarqueeBand from "./components/MarqueeBand";
 import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
 import GallerySection from "./components/GallerySection";
@@ -14,6 +15,9 @@ export default function Home() {
 
       {/* 1. Landing / Hero Section */}
       <HeroSection />
+
+      {/* Disciplines ticker */}
+      <MarqueeBand />
 
       {/* 2. About Us Section */}
       <AboutSection />

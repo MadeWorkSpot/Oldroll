@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Reveal from "./Reveal";
 
 const fieldClass =
   "w-full px-4 py-3 rounded-sm border border-neutral-200 bg-white text-neutral-900 placeholder:text-neutral-400 transition-colors focus:border-neutral-900 focus:outline-none";
@@ -35,7 +36,8 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-t border-neutral-100">
       <div className="w-full grid lg:grid-cols-12 gap-12 lg:gap-16">
-        <div className="lg:col-span-5 space-y-5">
+        <Reveal className="lg:col-span-5 space-y-1 md:space-y-2">
+          <p className="text-xs font-medium uppercase tracking-[0.28em] text-neutral-400">Contact</p>
           <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-neutral-900">
             Let&apos;s start a conversation.
           </h2>
@@ -65,9 +67,9 @@ export default function ContactSection() {
             <br />
             New York, NY 10012
           </p>
-        </div>
+        </Reveal>
 
-        <div className="lg:col-span-7">
+        <Reveal delay={120} className="lg:col-span-7">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="space-y-2">
               <label htmlFor="name" className="text-base font-medium text-neutral-700">
@@ -116,12 +118,12 @@ export default function ContactSection() {
             </div>
             <button
               type="submit"
-              className="w-full py-3 bg-neutral-900 text-white text-base font-medium rounded-sm hover:bg-neutral-800 transition-colors"
+              className="w-full py-3.5 bg-neutral-900 text-white text-base font-medium rounded-sm transition-all duration-300 hover:bg-neutral-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900"
             >
               Send Message
             </button>
           </form>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
