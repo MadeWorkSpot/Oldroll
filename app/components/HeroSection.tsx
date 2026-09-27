@@ -24,7 +24,7 @@ export default function HeroSection() {
       <div className="relative w-full max-w-4xl text-center">
 
         <h1
-          className="animate-rise-in mt-6 text-5xl sm:text-6xl md:text-8xl font-medium tracking-tight leading-[1.03] text-neutral-900 text-balance"
+          className="animate-rise-in mt-6 text-[clamp(2.25rem,1rem+6.5vw,6rem)] font-medium tracking-tight leading-[1.03] text-neutral-900 text-balance"
           style={{ animationDelay: "140ms" }}
         >
           Engineering experiences, from code to reality.
