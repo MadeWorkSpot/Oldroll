@@ -15,9 +15,6 @@ export default function GallerySection() {
     >
       <Reveal className="w-full flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-xs font-medium uppercase tracking-[0.28em] text-neutral-400">
-            Portfolio
-          </p>
           <h2 className="mt-4 text-4xl md:text-5xl font-medium tracking-tight text-neutral-900">
             Selected Works
           </h2>

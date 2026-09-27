@@ -23,7 +23,7 @@ export default function ContactSection() {
 
     // Extract the WhatsApp number (using the one from the UI or replace with yours)
     // Needs to be in international format without any spaces or symbols, e.g. 15551234567
-    const whatsappNumber = "15551234567";
+    const whatsappNumber = "917293402204";
 
     // Format the message for WhatsApp
     const text = `*New Contact Form Submission*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Message:* ${formData.message}`;
@@ -37,8 +37,7 @@ export default function ContactSection() {
     <section id="contact" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 border-t border-neutral-100">
       <div className="w-full grid lg:grid-cols-12 gap-12 lg:gap-16">
         <Reveal className="lg:col-span-5 space-y-1 md:space-y-2">
-          <p className="text-xs font-medium uppercase tracking-[0.28em] text-neutral-400">Contact</p>
-          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-neutral-900">
+          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-neutral-900 mb-2">
             Let&apos;s start a conversation.
           </h2>
 
@@ -49,23 +48,27 @@ export default function ContactSection() {
 
           <p className="text-lg text-neutral-500 leading-relaxed">
             <a
-              href="mailto:hello@studio.design"
+              href="mailto:info@oldrollentertainments.com"
               className="transition-colors hover:text-neutral-900"
             >
-              hello@studio.design
+              info@oldrollentertainments.com
             </a>
           </p>
 
           <p className="text-lg text-neutral-500 leading-relaxed">
-            <a href="tel:+15551234567" className="transition-colors hover:text-neutral-900">
-              +1 (555) 123-4567
+            <a href="tel:+917293402204" className="transition-colors hover:text-neutral-900">
+              +91 7293402204
+            </a>
+            <br/>
+            <a href="tel:+919061482884" className="transition-colors hover:text-neutral-900">
+              +91 9061482884
             </a>
           </p>
 
           <p className="text-lg text-neutral-500 leading-relaxed">
-            742 Evergreen Terrace
+            Wayanad Holdings
             <br />
-            New York, NY 10012
+            Vythiri, Wayanad
           </p>
         </Reveal>
 
@@ -83,7 +86,7 @@ export default function ContactSection() {
                 onChange={handleChange}
                 required
                 className={fieldClass}
-                placeholder="Jane Doe"
+                placeholder="Full Name"
               />
             </div>
             <div className="space-y-2">
@@ -98,7 +101,7 @@ export default function ContactSection() {
                 onChange={handleChange}
                 required
                 className={fieldClass}
-                placeholder="jane@example.com"
+                placeholder="E-mail"
               />
             </div>
             <div className="space-y-2">

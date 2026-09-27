@@ -48,9 +48,6 @@ export default function ServicesSection() {
       className="py-20 md:py-28 px-6 md:px-12 lg:px-24 border-t border-neutral-100"
     >
       <Reveal className="w-full max-w-2xl space-y-4">
-        <p className="text-xs font-medium uppercase tracking-[0.28em] text-neutral-400">
-          What we do
-        </p>
         <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-neutral-900">
           Our Services
         </h2>

@@ -22,12 +22,6 @@ export default function HeroSection() {
       </div>
 
       <div className="relative w-full max-w-4xl text-center">
-        <p
-          className="animate-rise-in text-xs font-medium uppercase tracking-[0.28em] text-neutral-400"
-          style={{ animationDelay: "60ms" }}
-        >
-          Oldroll
-        </p>
 
         <h1
           className="animate-rise-in mt-6 text-5xl sm:text-6xl md:text-8xl font-medium tracking-tight leading-[1.03] text-neutral-900 text-balance"
@@ -80,17 +74,6 @@ export default function HeroSection() {
           ))}
         </ul>
       </div>
-
-      <a
-        href="#about"
-        aria-label="Scroll to about section"
-        className="group absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-neutral-400 transition-colors hover:text-neutral-900 md:flex"
-      >
-        <span className="text-[10px] font-medium uppercase tracking-[0.3em]">Scroll</span>
-        <span className="relative h-10 w-px overflow-hidden bg-neutral-200">
-          <span className="animate-scroll-line absolute inset-x-0 top-0 h-4 bg-neutral-900" />
-        </span>
-      </a>
     </section>
   );
 }

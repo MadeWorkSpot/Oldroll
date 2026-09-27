@@ -18,7 +18,7 @@ export default function Footer() {
   return (
     <footer className="px-6 md:px-12 lg:px-24 border-t border-neutral-100 bg-neutral-50/60">
       <div className="w-full grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-12">
-        <div className="lg:col-span-6 space-y-5">
+        <div className="lg:col-span-4 space-y-5">
           <Image
             src="/logo/logo.png"
             alt="Oldroll"
@@ -31,7 +31,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="lg:col-span-3">
+        <div className="lg:col-span-2">
           <h2 className="text-sm font-medium text-neutral-900">Navigate</h2>
           <ul className="mt-4 space-y-3 text-base text-neutral-500">
             {navigate.map((item) => (
@@ -54,6 +54,28 @@ export default function Footer() {
                 </a>
               </li>
             ))}
+          </ul>
+        </div>
+
+        <div className="lg:col-span-3">
+          <h2 className="text-sm font-medium text-neutral-900">Contact</h2>
+          <ul className="mt-4 space-y-3 text-base text-neutral-500">
+            <li>
+              <a href="mailto:info@oldrollentertainments.com" className="hover:text-neutral-900 transition-colors">
+                info@oldrollentertainments.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+917293402204" className="hover:text-neutral-900 transition-colors">
+                +91 72934 02204
+              </a>
+            </li>
+            <li>
+              <a href="tel:+919061482884" className="hover:text-neutral-900 transition-colors">
+                +91 90614 82884
+              </a>
+            </li>
+            <li>Wayanad Holdings, Vythiri, Wayanad</li>
           </ul>
         </div>
       </div>

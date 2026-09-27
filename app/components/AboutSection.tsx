@@ -29,33 +29,30 @@ export default function AboutSection() {
 
         <Reveal delay={120}>
           <div className="space-y-5">
-            <p className="text-xs font-medium uppercase tracking-[0.28em] text-neutral-400">
-              Who we are
-            </p>
             <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-neutral-900">
               About Our Studio
             </h2>
 
-            <p className="text-xl leading-relaxed text-neutral-700">
+            <p className="text-lg leading-relaxed text-neutral-600">
               Oldroll is a technology-driven company focused on developing
               innovative software, products, and immersive entertainment experiences. We combine
               software development, electronics, physical interfaces, and creative design to build
               technology-driven solutions for real-world applications.
             </p>
 
-            <p className="text-lg text-neutral-500 leading-relaxed">
+            <p className="text-lg text-neutral-600 leading-relaxed">
               Our evolving portfolio includes software solutions, VR Gaming, Chronicle Spot, and
               interactive products such as Fridge Magnet, bringing technology and creativity together
               in new and engaging ways.
             </p>
 
-            <p className="text-lg text-neutral-500 leading-relaxed">
+            <p className="text-lg text-neutral-600 leading-relaxed">
               We continuously explore, develop, and launch new concepts, transforming ideas into
               innovative products, software, and experiences that are interactive, memorable, and
               scalable across events, businesses, and diverse environments.
             </p>
 
-            <p className="text-lg text-neutral-500 leading-relaxed">
+            <p className="text-lg text-neutral-600 leading-relaxed">
               From software to physical experiences, we build technology that engages, entertains,
               and creates meaningful interactions.
             </p>
