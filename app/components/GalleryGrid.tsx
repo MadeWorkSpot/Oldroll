@@ -8,7 +8,7 @@ export default function GalleryGrid() {
       {media.map((item) => (
         <figure key={item.id} className="mb-10 break-inside-avoid md:mb-12">
           <div
-            className="relative w-full overflow-hidden rounded-sm bg-neutral-100"
+            className="relative w-full overflow-hidden rounded-sm bg-slate-900"
             style={{ aspectRatio: `${item.width} / ${item.height}` }}
           >
             {item.type === "video" ? (
@@ -24,12 +24,12 @@ export default function GalleryGrid() {
             )}
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-neutral-900/10"
+              className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10"
             />
           </div>
           <figcaption className="mt-4 flex items-baseline justify-between gap-4">
-            <h2 className="text-lg font-medium text-neutral-900">{item.title}</h2>
-            <span className="shrink-0 text-sm text-neutral-400">{item.tag}</span>
+            <h2 className="text-lg font-medium text-white">{item.title}</h2>
+            <span className="shrink-0 text-sm text-slate-400">{item.tag}</span>
           </figcaption>
         </figure>
       ))}

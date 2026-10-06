@@ -15,7 +15,7 @@ const links = [
 
 // Shared by both bars so the two halves of the morph stay in lockstep.
 const bar =
-  "absolute left-0 block h-[1.5px] w-[22px] rounded-full bg-neutral-900 transition-all duration-[450ms] ease-[cubic-bezier(0.16,1,0.3,1)]";
+  "absolute left-0 block h-[1.5px] w-[22px] rounded-full bg-white transition-all duration-[450ms] ease-[cubic-bezier(0.16,1,0.3,1)]";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +53,7 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 w-full z-50 transition-colors duration-300 ${
-          isScrolled ? "bg-white border-b border-neutral-200" : "bg-white/90 border-b border-transparent"
+          isScrolled ? "bg-slate-950 border-b border-slate-800" : "bg-slate-950/90 border-b border-transparent"
         }`}
       >
         <div className="w-full px-6 md:px-12 lg:px-24 h-20 flex items-center justify-between">
@@ -64,24 +64,24 @@ export default function Navbar() {
               width={2005}
               height={593}
               priority
-              className="h-8 w-auto md:h-10"
+              className="h-8 w-auto md:h-10 brightness-0 invert"
             />
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8 text-base text-neutral-600">
+          <nav className="hidden md:flex items-center gap-8 text-base text-slate-300">
             {links.map((link) => (
               <a
                 key={link.label}
                 href={hrefFor(link.hash)}
-                className="py-2 transition-colors hover:text-neutral-900"
+                className="py-2 transition-colors hover:text-white"
               >
                 {link.label}
               </a>
             ))}
             <a
               href={hrefFor("#contact")}
-              className="rounded-sm border border-neutral-200 px-5 py-2.5 font-medium text-neutral-900 transition-colors hover:border-neutral-400"
+              className="rounded-sm border border-slate-800 px-5 py-2.5 font-medium text-white transition-colors hover:border-neutral-400"
             >
               Start a project
             </a>
@@ -118,12 +118,12 @@ export default function Navbar() {
             aria-label="Close menu"
             tabIndex={-1}
             onClick={() => setIsOpen(false)}
-            className="animate-menu-fade fixed inset-0 top-20 z-30 cursor-default bg-neutral-900/25 md:hidden"
+            className="animate-menu-fade fixed inset-0 top-20 z-30 cursor-default bg-white/25 md:hidden"
           />
 
           <div
             id="mobile-menu"
-            className="animate-menu-in fixed inset-x-0 top-20 z-40 max-h-menu overflow-y-auto overscroll-contain border-b border-neutral-200 bg-white shadow-lg shadow-neutral-900/5 md:hidden"
+            className="animate-menu-in fixed inset-x-0 top-20 z-40 max-h-menu overflow-y-auto overscroll-contain border-b border-slate-800 bg-slate-950 shadow-lg shadow-neutral-900/5 md:hidden"
           >
             <nav className="px-6 pt-2 pb-6 flex flex-col">
               {links.map((link, index) => (
@@ -132,12 +132,12 @@ export default function Navbar() {
                   href={hrefFor(link.hash)}
                   onClick={() => setIsOpen(false)}
                   style={{ animationDelay: `${80 + index * 55}ms` }}
-                  className="animate-item-in group flex items-center justify-between border-b border-neutral-100 py-4 text-lg text-neutral-800"
+                  className="animate-item-in group flex items-center justify-between border-b border-slate-800 py-4 text-lg text-slate-200"
                 >
-                  <span className="transition-colors group-hover:text-neutral-900">
+                  <span className="transition-colors group-hover:text-white">
                     {link.label}
                   </span>
-                  <span className="text-neutral-300 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-neutral-500">
+                  <span className="text-slate-500 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-slate-300">
                     <ArrowRight size={18} />
                   </span>
                 </a>
@@ -147,7 +147,7 @@ export default function Navbar() {
                 href={hrefFor("#contact")}
                 onClick={() => setIsOpen(false)}
                 style={{ animationDelay: `${80 + links.length * 55}ms` }}
-                className="animate-item-in mt-6 inline-flex items-center justify-center rounded-sm bg-neutral-900 px-5 py-3.5 text-base font-medium text-white"
+                className="animate-item-in mt-6 inline-flex items-center justify-center rounded-sm bg-white px-5 py-3.5 text-base font-medium text-white"
               >
                 Start a project
               </a>

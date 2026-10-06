@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   return (
-    <main className="min-h-screen bg-white text-neutral-900">
+    <main className="min-h-screen bg-slate-950 text-white selection:bg-blue-800 selection:text-white">
       <div className="px-6 md:px-12 lg:px-24 pt-24 pb-16 md:pt-28 md:pb-24">
         <div className="w-full">
           <Link
             href="/"
-            className="group inline-flex items-center gap-2 text-sm text-neutral-500 transition-colors hover:text-neutral-900"
+            className="group inline-flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-white"
           >
             <ArrowLeft
               size={16}
@@ -26,10 +26,10 @@ export default function GalleryPage() {
           </Link>
 
           <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <h1 className="text-5xl md:text-7xl font-medium tracking-tight leading-[1.02] text-neutral-900">
+            <h1 className="text-5xl md:text-7xl font-medium tracking-tight leading-[1.02] text-white">
               Gallery
             </h1>
-            <p className="text-lg text-neutral-500">
+            <p className="text-lg text-slate-400">
               Everything we&apos;ve built, in images and motion.
             </p>
           </div>

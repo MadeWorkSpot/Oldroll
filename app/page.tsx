@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-neutral-900 flex flex-col selection:bg-neutral-200 selection:text-neutral-900">
+    <main className="min-h-screen bg-slate-950 text-white flex flex-col selection:bg-blue-800 selection:text-white">
       {/* Navigation Header */}
       <Navbar />
 

@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import HeroBackdrop from "./HeroBackdrop";
 
 const capabilities = [
   "Software",
@@ -16,22 +17,21 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-24 pt-24 pb-20 overflow-hidden"
     >
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-grid-lines mask-fade-b" />
-        <div className="animate-drift absolute -top-1/4 left-1/2 h-[720px] w-[1100px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(23,23,23,0.09),transparent)]" />
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent" />
+        <HeroBackdrop />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-slate-950 to-transparent" />
       </div>
 
       <div className="relative w-full max-w-4xl text-center">
 
         <h1
-          className="animate-rise-in mt-6 text-[clamp(2.25rem,1rem+6.5vw,6rem)] font-medium tracking-tight leading-[1.03] text-neutral-900 text-balance"
+          className="animate-rise-in mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.03] text-white text-balance"
           style={{ animationDelay: "140ms" }}
         >
           Engineering experiences, from code to reality.
         </h1>
 
         <p
-          className="animate-rise-in mx-auto mt-7 max-w-2xl text-lg text-neutral-500 leading-relaxed text-balance"
+          className="animate-rise-in mx-auto mt-7 max-w-2xl text-lg text-slate-300 leading-relaxed text-balance"
           style={{ animationDelay: "240ms" }}
         >
           We build software, electronics, and interactive products that bring technology into the
@@ -44,7 +44,7 @@ export default function HeroSection() {
         >
           <a
             href="#gallery"
-            className="group inline-flex items-center justify-center gap-2 rounded-sm bg-neutral-900 px-7 py-3.5 text-base font-medium text-white transition-all duration-300 hover:bg-neutral-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900"
+            className="group inline-flex items-center justify-center gap-2 rounded-sm bg-blue-600 px-7 py-3.5 text-base font-medium text-white transition-all duration-300 hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
           >
             View Our Work
             <ArrowRight
@@ -54,7 +54,7 @@ export default function HeroSection() {
           </a>
           <a
             href="#services"
-            className="inline-flex items-center justify-center rounded-sm border border-neutral-200 bg-white/60 px-7 py-3.5 text-base font-medium text-neutral-900 backdrop-blur transition-colors duration-300 hover:border-neutral-400"
+            className="inline-flex items-center justify-center rounded-sm border border-slate-700 bg-slate-800/40 px-7 py-3.5 text-base font-medium text-white backdrop-blur transition-colors duration-300 hover:border-slate-500"
           >
             What We Do
           </a>
@@ -67,7 +67,7 @@ export default function HeroSection() {
           {capabilities.map((item) => (
             <li
               key={item}
-              className="rounded-full border border-neutral-200 bg-white/60 px-3.5 py-1 text-sm text-neutral-500 backdrop-blur"
+              className="rounded-full border border-slate-800 bg-slate-900/40 px-3.5 py-1 text-sm text-slate-300 backdrop-blur"
             >
               {item}
             </li>
