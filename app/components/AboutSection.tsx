@@ -29,30 +29,30 @@ export default function AboutSection() {
 
         <Reveal delay={120}>
           <div className="space-y-5">
-            <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-white">
+            <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-white">
               About Our Studio
             </h2>
 
-            <p className="text-lg leading-relaxed text-white">
+            <p className="text-base md:text-lg leading-relaxed text-white">
               Oldroll is a technology-driven company focused on developing
               innovative software, products, and immersive entertainment experiences. We combine
               software development, electronics, physical interfaces, and creative design to build
               technology-driven solutions for real-world applications.
             </p>
 
-            <p className="text-lg text-white leading-relaxed">
+            <p className="text-base md:text-lg text-white leading-relaxed">
               Our evolving portfolio includes software solutions, VR Gaming, Chronicle Spot, and
               interactive products such as Fridge Magnet, bringing technology and creativity together
               in new and engaging ways.
             </p>
 
-            <p className="text-lg text-white leading-relaxed">
+            <p className="text-base md:text-lg text-white leading-relaxed">
               We continuously explore, develop, and launch new concepts, transforming ideas into
               innovative products, software, and experiences that are interactive, memorable, and
               scalable across events, businesses, and diverse environments.
             </p>
 
-            <p className="text-lg text-white leading-relaxed">
+            <p className="text-base md:text-lg text-white leading-relaxed">
               From software to physical experiences, we build technology that engages, entertains,
               and creates meaningful interactions.
             </p>

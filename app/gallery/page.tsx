@@ -26,10 +26,10 @@ export default function GalleryPage() {
           </Link>
 
           <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <h1 className="text-5xl md:text-7xl font-medium tracking-tight leading-[1.02] text-white">
+            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.02] text-white">
               Gallery
             </h1>
-            <p className="text-lg text-slate-400">
+            <p className="text-base text-slate-400">
               Everything we&apos;ve built, in images and motion.
             </p>
           </div>

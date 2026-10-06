@@ -44,7 +44,7 @@ export default function HeroSection() {
         >
           <a
             href="#gallery"
-            className="group inline-flex items-center justify-center gap-2 rounded-sm bg-blue-600 px-7 py-3.5 text-base font-medium text-white transition-all duration-300 hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+            className="group inline-flex items-center justify-center gap-2 rounded-sm bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
           >
             View Our Work
             <ArrowRight
@@ -54,7 +54,7 @@ export default function HeroSection() {
           </a>
           <a
             href="#services"
-            className="inline-flex items-center justify-center rounded-sm border border-slate-700 bg-slate-800/40 px-7 py-3.5 text-base font-medium text-white backdrop-blur transition-colors duration-300 hover:border-slate-500"
+            className="inline-flex items-center justify-center rounded-sm border border-slate-700 bg-slate-800/40 px-5 py-2.5 text-sm font-medium text-white backdrop-blur transition-colors duration-300 hover:border-slate-500"
           >
             What We Do
           </a>

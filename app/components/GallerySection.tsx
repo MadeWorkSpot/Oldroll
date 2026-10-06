@@ -15,11 +15,11 @@ export default function GallerySection() {
     >
       <Reveal className="w-full flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h2 className="mt-4 text-4xl md:text-5xl font-medium tracking-tight text-white">
+          <h2 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight text-white">
             Selected Works
           </h2>
         </div>
-        <p className="text-base text-slate-300">A curation of our finest work.</p>
+        <p className="text-base md:text-lg text-slate-300">A curation of our finest work.</p>
       </Reveal>
 
       <div className="w-full mt-10 md:mt-14 columns-1 sm:columns-2 lg:columns-3 gap-x-6">
@@ -51,8 +51,8 @@ export default function GallerySection() {
               />
             </div>
             <figcaption className="mt-4 flex items-baseline justify-between gap-4">
-              <h3 className="text-lg font-medium text-white">{item.title}</h3>
-              <span className="shrink-0 text-sm text-neutral-400">{item.tag}</span>
+              <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+              <span className="shrink-0 text-sm text-slate-400">{item.tag}</span>
             </figcaption>
           </Reveal>
         ))}
@@ -61,7 +61,7 @@ export default function GallerySection() {
       <Reveal className="w-full mt-12 md:mt-16">
         <Link
           href="/gallery"
-          className="group inline-flex items-center gap-2 rounded-sm border border-neutral-200 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-neutral-900 hover:bg-neutral-900 hover:text-white"
+          className="group inline-flex items-center gap-2 rounded-sm border border-neutral-200 px-5 py-2 text-sm font-medium text-white transition-all duration-300 hover:border-neutral-900 hover:bg-neutral-900 hover:text-white"
         >
           View the full gallery
           <ArrowRight

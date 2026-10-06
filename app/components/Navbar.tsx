@@ -69,7 +69,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8 text-base text-slate-300">
+          <nav className="hidden md:flex items-center gap-8 text-sm text-slate-300">
             {links.map((link) => (
               <a
                 key={link.label}
@@ -132,13 +132,13 @@ export default function Navbar() {
                   href={hrefFor(link.hash)}
                   onClick={() => setIsOpen(false)}
                   style={{ animationDelay: `${80 + index * 55}ms` }}
-                  className="animate-item-in group flex items-center justify-between border-b border-slate-800 py-4 text-lg text-slate-200"
+                  className="animate-item-in group flex items-center justify-between border-b border-slate-800 py-3.5 text-sm text-slate-300"
                 >
                   <span className="transition-colors group-hover:text-white">
                     {link.label}
                   </span>
                   <span className="text-slate-500 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-slate-300">
-                    <ArrowRight size={18} />
+                    <ArrowRight size={16} />
                   </span>
                 </a>
               ))}
@@ -147,7 +147,7 @@ export default function Navbar() {
                 href={hrefFor("#contact")}
                 onClick={() => setIsOpen(false)}
                 style={{ animationDelay: `${80 + links.length * 55}ms` }}
-                className="animate-item-in mt-6 inline-flex items-center justify-center rounded-sm bg-white px-5 py-3.5 text-base font-medium text-white"
+                className="animate-item-in mt-6 inline-flex items-center justify-center rounded-sm bg-white px-5 py-3 text-sm font-medium text-slate-950 transition-colors hover:bg-slate-200"
               >
                 Start a project
               </a>

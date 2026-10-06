@@ -32,7 +32,7 @@ export default function Footer() {
         </div>
 
         <div className="lg:col-span-2">
-          <h2 className="text-sm font-medium text-white">Navigate</h2>
+          <h2 className="text-base font-medium text-white">Navigate</h2>
           <ul className="mt-4 space-y-3 text-base text-slate-400">
             {navigate.map((item) => (
               <li key={item.label}>
@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
 
         <div className="lg:col-span-3">
-          <h2 className="text-sm font-medium text-white">Follow</h2>
+          <h2 className="text-base font-medium text-white">Follow</h2>
           <ul className="mt-4 space-y-3 text-base text-slate-400">
             {follow.map((item) => (
               <li key={item.label}>
@@ -58,7 +58,7 @@ export default function Footer() {
         </div>
 
         <div className="lg:col-span-3">
-          <h2 className="text-sm font-medium text-white">Contact</h2>
+          <h2 className="text-base font-medium text-white">Contact</h2>
           <ul className="mt-4 space-y-3 text-base text-slate-400">
             <li>
               <a href="mailto:info@oldrollentertainments.com" className="hover:text-white transition-colors">
@@ -80,7 +80,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="w-full flex flex-col gap-2 border-t border-slate-800 py-6 text-base text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+      <div className="w-full flex flex-col gap-2 border-t border-slate-800 py-6 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
         <p>&copy; {new Date().getFullYear()} Oldroll. All rights reserved.</p>
         <p>Engineering experiences, from code to reality.</p>
       </div>
