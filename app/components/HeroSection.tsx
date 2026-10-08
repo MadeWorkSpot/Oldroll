@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import HeroBackdrop from "./HeroBackdrop";
 
 const capabilities = [
   "Software",
@@ -17,8 +17,18 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-24 pt-24 pb-20 overflow-hidden"
     >
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
-        <HeroBackdrop />
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-slate-950 to-transparent" />
+        <Image
+          src="/landing.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        {/* Keeps the headline legible over the brighter upper half of the photo
+            and blends the image into the slate-950 sections below it. */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/75 to-slate-950/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/60" />
       </div>
 
       <div className="relative w-full max-w-4xl text-center">

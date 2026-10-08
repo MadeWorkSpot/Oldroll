@@ -53,7 +53,7 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 w-full z-50 transition-colors duration-300 ${
-          isScrolled ? "bg-slate-950 border-b border-slate-800" : "bg-slate-950/90 border-b border-transparent"
+          isScrolled ? "bg-slate-950 border-b border-slate-800" : "bg-transparent border-b border-transparent"
         }`}
       >
         <div className="w-full px-6 md:px-12 lg:px-24 h-20 flex items-center justify-between">
@@ -69,7 +69,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8 text-sm text-slate-300">
+          <nav className="hidden md:flex items-center gap-8 text-base text-slate-300">
             {links.map((link) => (
               <a
                 key={link.label}

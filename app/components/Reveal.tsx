@@ -16,11 +16,24 @@ export default function Reveal({
   as: Tag = "div",
 }: RevealProps) {
   const ref = useRef<HTMLElement | null>(null);
-  const [visible, setVisible] = useState(() => typeof IntersectionObserver === "undefined");
+
+  // Whether this element has entered the viewport.
+  //
+  // Starts false on both the server and the client so hydration matches. The
+  // previous version seeded this from `typeof IntersectionObserver`, which made
+  // the server render the visible class and the client not, failing hydration
+  // for every Reveal on the page.
+  //
+  // That means the class flip now happens after hydration rather than being
+  // baked into the HTML. For content already in view the observer fires
+  // immediately on mount, so the entrance still plays without a flash of
+  // hidden-then-shown content. With JavaScript off, nothing ever flips the
+  // class, so <noscript> in the layout forces these visible.
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const node = ref.current;
-    if (!node || typeof IntersectionObserver === "undefined") return;
+    if (!node) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
