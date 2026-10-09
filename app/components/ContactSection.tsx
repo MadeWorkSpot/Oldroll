@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Reveal from "./Reveal";
+import { whatsappUrl } from "../lib/whatsapp";
 
 const fieldClass =
   "w-full px-4 py-3 rounded-sm border border-slate-700 bg-slate-900 text-white placeholder:text-slate-500 transition-colors focus:border-slate-500 focus:outline-none";
@@ -21,16 +22,16 @@ export default function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Extract the WhatsApp number (using the one from the UI or replace with yours)
-    // Needs to be in international format without any spaces or symbols, e.g. 15551234567
-    const whatsappNumber = "917293402204";
+    const url = whatsappUrl([
+      "*New Contact Form Submission*",
+      "",
+      `*Name:* ${formData.name}`,
+      `*Email:* ${formData.email}`,
+      "",
+      `*Message:* ${formData.message}`,
+    ]);
 
-    // Format the message for WhatsApp
-    const text = `*New Contact Form Submission*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Message:* ${formData.message}`;
-
-    // Open WhatsApp URL
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${text}`;
-    window.open(whatsappUrl, "_blank");
+    window.open(url, "_blank");
   };
 
   return (

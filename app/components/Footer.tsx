@@ -5,6 +5,7 @@ const navigate = [
   { label: "About", href: "/#about" },
   { label: "Services", href: "/#services" },
   { label: "Gallery", href: "/gallery" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/#contact" },
 ];
 

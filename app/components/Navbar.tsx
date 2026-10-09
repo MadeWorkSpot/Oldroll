@@ -5,11 +5,14 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 
-const links = [
+// `href` targets a real route; `hash` targets a section on the home page and is
+// prefixed with "/" when we are already on another page.
+const links: { label: string; href?: string; hash?: string }[] = [
   { label: "Home", hash: "#home" },
   { label: "About", hash: "#about" },
   { label: "Services", hash: "#services" },
   { label: "Gallery", hash: "#gallery" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact", hash: "#contact" },
 ];
 
@@ -24,7 +27,10 @@ export default function Navbar() {
   const isHome = pathname === "/";
 
   // Hash links only resolve on the home page, so prefix them elsewhere.
-  const hrefFor = (hash: string) => (isHome ? hash : `/${hash}`);
+  const hrefFor = (link: string | (typeof links)[number]) => {
+    if (typeof link === "string") return isHome ? link : `/${link}`;
+    return link.href ?? (isHome ? link.hash! : `/${link.hash}`);
+  };
 
   // Solid background and rule once the page has scrolled.
   useEffect(() => {
@@ -73,7 +79,7 @@ export default function Navbar() {
             {links.map((link) => (
               <a
                 key={link.label}
-                href={hrefFor(link.hash)}
+                href={hrefFor(link)}
                 className="py-2 transition-colors hover:text-white"
               >
                 {link.label}
@@ -129,7 +135,7 @@ export default function Navbar() {
               {links.map((link, index) => (
                 <a
                   key={link.label}
-                  href={hrefFor(link.hash)}
+                  href={hrefFor(link)}
                   onClick={() => setIsOpen(false)}
                   style={{ animationDelay: `${80 + index * 55}ms` }}
                   className="animate-item-in group flex items-center justify-between border-b border-slate-800 py-3.5 text-sm text-slate-300"

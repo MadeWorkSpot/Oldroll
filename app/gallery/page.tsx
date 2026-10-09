@@ -12,7 +12,8 @@ export const metadata: Metadata = {
 export default function GalleryPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white selection:bg-blue-800 selection:text-white">
-      <div className="px-6 md:px-12 lg:px-24 pt-24 pb-16 md:pt-28 md:pb-24">
+      {/* No fixed Navbar on this route, so no top padding is needed to clear it. */}
+      <div className="px-6 md:px-12 lg:px-24 pt-8 pb-16 md:pb-24">
         <div className="w-full">
           <Link
             href="/"
@@ -25,11 +26,11 @@ export default function GalleryPage() {
             Back home
           </Link>
 
-          <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.02] text-white">
+          <div className="mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <h1 className="text-5xl font-semibold tracking-tight leading-[0.98] text-white md:text-6xl lg:text-7xl">
               Gallery
             </h1>
-            <p className="text-base text-slate-400">
+            <p className="text-base text-slate-400 lg:pb-3">
               Everything we&apos;ve built, in images and motion.
             </p>
           </div>
