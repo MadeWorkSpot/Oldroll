@@ -10,22 +10,24 @@ export default function AboutSection() {
       className="py-20 md:py-28 px-6 md:px-12 lg:px-24 border-t border-slate-800"
     >
       <div className="w-full grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <Reveal className="group relative min-h-[22rem] md:min-h-[30rem] w-full rounded-sm overflow-hidden bg-slate-900">
-          <Image
-            src="/test/chronicle-spot.jpeg"
-            alt="The Chronicle Spot photo booth, built by Oldroll"
-            fill
-            sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
-          />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10"
-          />
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-neutral-900/70 to-transparent p-5 text-sm text-white/90">
-            Chronicle Spot — interactive photo booth
-          </div>
-        </Reveal>
+        <div style={{ height: "700px" }}>
+          <Reveal className="group relative w-full h-full rounded-sm overflow-hidden bg-slate-900">
+            <Image
+              src="/test/chronicle-spot.jpeg"
+              alt="The Chronicle Spot photo booth, built by Oldroll"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover object-[center_75%] transition-transform duration-700 group-hover:scale-105"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-neutral-900/70 to-transparent p-5 text-sm text-white/90">
+              Chronicle Spot — interactive photo booth
+            </div>
+          </Reveal>
+        </div>
 
         <Reveal delay={120}>
           <div className="space-y-5">

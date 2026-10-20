@@ -10,9 +10,8 @@ const navigate = [
 ];
 
 const follow = [
-  { label: "Twitter", href: "#" },
-  { label: "Instagram", href: "#" },
-  { label: "LinkedIn", href: "#" },
+  { label: "Instagram", href: "https://www.instagram.com/_oldroll._" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/oldrollentertainments/" },
 ];
 
 export default function Footer() {
