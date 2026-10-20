@@ -10,7 +10,7 @@ export default function AboutSection() {
       className="py-20 md:py-28 px-6 md:px-12 lg:px-24 border-t border-slate-800"
     >
       <div className="w-full grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <div style={{ height: "700px" }}>
+        <div className="w-full max-w-[480px] justify-self-center aspect-[851/1280] md:h-[700px] md:max-w-none md:justify-self-auto md:aspect-auto">
           <Reveal className="group relative w-full h-full rounded-sm overflow-hidden bg-slate-900">
             <Image
               src="/test/chronicle-spot.jpeg"
